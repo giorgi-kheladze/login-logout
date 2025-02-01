@@ -10,12 +10,21 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-function showPassword(){
-    let passwordField = document.getElementById("password");
-    if (passwordField.type === "password") {
-        passwordField.type = "text";
+function showPassword(icon){
+    let passwordField = icon.previousElementSibling;
+    passwordField.type = passwordField.type === "password" ? "text" : "password";
+}
+
+function success(){
+    let box = document.getElementById("box")
+    let successBox = document.getElementById("success-box")
+
+    if(box.style.display === "none") {
+        box.style.display = "block";
+        successBox.style.display = "none";
     } else {
-        passwordField.type = "password";
+        box.style.display = "none";
+        successBox.style.display = "block";
     }
 }
 

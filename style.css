@@ -93,6 +93,9 @@ form button{
     line-height: 19.2px;
     cursor: pointer;
 }
+form .box{
+    cursor: pointer;
+}
 form .password{
     position: relative;
 }
