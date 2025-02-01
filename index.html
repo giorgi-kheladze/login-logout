@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <img src="assets/cancel.png" class="cancel">
+        <img src="assets/cancel-white.png" class="cancel-white">
+        <div class="form-container sign-in" id="sign-in">
+            <form>
+                <h1>ავტორიზაცია</h1>
+                <span>ელ.პოსტა</span>
+                <input type="email">
+                <span>პაროლი</span>
+                <div class="password">
+                    <input type="password" id="password">
+                    <img src="assets/hide.png" onclick="showPassword()">
+                </div>
+                <span class="forget" onclick="forgetPassword()"><a href="#forget-password">დაგავიწყდათ პაროლი?</a></span>
+                <button>ავტორიზაცია</button>
+                <button class="google"><img src="assets/google.png">Sign in with Google</button>
+            </form>
+        </div>
+
+        <section class="forget-password" id="forget-password" style="display: none;">
+            <div class="form-container sign-in">
+                <form>
+                    <h1>დაგავიწყდა პაროლი?</h1>
+                    <span>ელ.პოსტა</span>
+                    <input type="email">
+                    <button onclick="resolvePassword()"><a href="#resolve-password" style="color: white;">პაროლის აღდგენა</a></button>
+                </form>
+            </div>
+        </section>
+        <section class="resolve-password" id="resolve-password" style="display: none;">
+            <div class="form-container sign-in">
+                <form>
+                    <h1>პაროლის აღდგენა</h1>
+                    <span>ახალი პაროლი</span>
+                    <div class="password">
+                        <input type="password" id="password">
+                        <img src="assets/hide.png" onclick="showPassword()">
+                    </div>
+                    <span>გაიმეორეთ პაროლი</span>
+                    <div class="password">
+                        <input type="password" id="password">
+                        <img src="assets/hide.png" onclick="showPassword()">
+                    </div>
+                    <button>შენახვა</button>
+                </form>
+            </div>
+        </section>
+
+        <div class="form-container sign-up">
+            <form>
+                <h1>რეგისტრაცია</h1>
+                <div class="person">
+                    <div>
+                        <span>სახელი</span>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <span>გვარი</span>
+                        <input type="text">
+                    </div>
+                </div>
+                <span>ელ.პოსტა</span>
+                <input type="email">
+                <span>პაროლი</span>
+                <div class="password">
+                    <input type="password" id="password">
+                    <img src="assets/hide.png" onclick="showPassword()">
+                </div>
+                <span>გაიმეორეთ პაროლი</span>
+                <div class="password">
+                    <input type="password" id="password">
+                    <img src="assets/hide.png" onclick="showPassword()">
+                </div>
+                <div class="agreement">
+                    <img src="assets/box.png" class="box">
+                    <span>ვეთანხმები საიტის გამოყენების წესებს და კონფიდენციალურობის პოლიტიკას.</span>
+                </div>
+                <button>რეგისტრაცია</button>
+                <button class="google"><img src="assets/google.png">Sign in with Google</button>
+            </form>
+        </div>
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <img src="assets/logo.png">
+                    <button class="toggle-btn" id="login" onclick="showAuthorization()">ავტორიზაცია</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <img src="assets/logo.png">
+                    <button class="toggle-btn" id="authoritation" style="display: none;" onclick="showAuthorization()">ავტორიზაცია</button>
+                    <button class="toggle-btn" id="register">რეგისტრაცია</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
