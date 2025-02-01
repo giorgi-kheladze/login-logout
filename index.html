@@ -17,8 +17,8 @@
                 <input type="email">
                 <span>პაროლი</span>
                 <div class="password">
-                    <input type="password" id="password">
-                    <img src="assets/hide.png" onclick="showPassword()">
+                    <input type="password">
+                    <img src="assets/hide.png" onclick="showPassword(this)">
                 </div>
                 <span class="forget" onclick="forgetPassword()"><a href="#forget-password">დაგავიწყდათ პაროლი?</a></span>
                 <button>ავტორიზაცია</button>
@@ -42,13 +42,13 @@
                     <h1>პაროლის აღდგენა</h1>
                     <span>ახალი პაროლი</span>
                     <div class="password">
-                        <input type="password" id="password">
-                        <img src="assets/hide.png" onclick="showPassword()">
+                        <input type="password">
+                        <img src="assets/hide.png" onclick="showPassword(this)">
                     </div>
                     <span>გაიმეორეთ პაროლი</span>
                     <div class="password">
-                        <input type="password" id="password">
-                        <img src="assets/hide.png" onclick="showPassword()">
+                        <input type="password">
+                        <img src="assets/hide.png" onclick="showPassword(this)">
                     </div>
                     <button>შენახვა</button>
                 </form>
@@ -72,16 +72,17 @@
                 <input type="email">
                 <span>პაროლი</span>
                 <div class="password">
-                    <input type="password" id="password">
-                    <img src="assets/hide.png" onclick="showPassword()">
+                    <input type="password">
+                    <img src="assets/hide.png" onclick="showPassword(this)">
                 </div>
                 <span>გაიმეორეთ პაროლი</span>
                 <div class="password">
-                    <input type="password" id="password">
-                    <img src="assets/hide.png" onclick="showPassword()">
+                    <input type="password">
+                    <img src="assets/hide.png" onclick="showPassword(this)">
                 </div>
                 <div class="agreement">
-                    <img src="assets/box.png" class="box">
+                    <img src="/assets/success-one.png" style="display: none;" class="success-box box" id="success-box" onclick="success()">
+                    <img src="assets/box.png" class="box" id="box" onclick="success()">
                     <span>ვეთანხმები საიტის გამოყენების წესებს და კონფიდენციალურობის პოლიტიკას.</span>
                 </div>
                 <button>რეგისტრაცია</button>
