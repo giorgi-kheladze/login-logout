@@ -11,43 +11,43 @@
         <img src="assets/cancel.png" class="cancel">
         <img src="assets/cancel-white.png" class="cancel-white">
         <div class="form-container sign-in" id="sign-in">
-            <form>
+            <form id="form">
                 <h1>ავტორიზაცია</h1>
-                <span>ელ.პოსტა</span>
-                <input type="email">
-                <span>პაროლი</span>
+                <span id="email-label">ელ.პოსტა</span>
+                <input type="email" id="email">
+                <span id="password-label">პაროლი</span>
                 <div class="password">
-                    <input type="password">
+                    <input type="password" id="password">
                     <img src="assets/hide.png" onclick="showPassword(this)">
                 </div>
                 <span class="forget" onclick="forgetPassword()"><a href="#forget-password">დაგავიწყდათ პაროლი?</a></span>
-                <button>ავტორიზაცია</button>
+                <button type="submit">ავტორიზაცია</button>
                 <button class="google"><img src="assets/google.png">Sign in with Google</button>
             </form>
         </div>
 
         <section class="forget-password" id="forget-password" style="display: none;">
             <div class="form-container sign-in">
-                <form>
+                <form id="form">
                     <h1>დაგავიწყდა პაროლი?</h1>
                     <span>ელ.პოსტა</span>
-                    <input type="email">
+                    <input type="email" id="email">
                     <button onclick="resolvePassword()"><a href="#resolve-password" style="color: white;">პაროლის აღდგენა</a></button>
                 </form>
             </div>
         </section>
         <section class="resolve-password" id="resolve-password" style="display: none;">
             <div class="form-container sign-in">
-                <form>
+                <form id="form">
                     <h1>პაროლის აღდგენა</h1>
                     <span>ახალი პაროლი</span>
                     <div class="password">
-                        <input type="password">
+                        <input type="password" id="password">
                         <img src="assets/hide.png" onclick="showPassword(this)">
                     </div>
                     <span>გაიმეორეთ პაროლი</span>
                     <div class="password">
-                        <input type="password">
+                        <input type="password" id="reset-password">
                         <img src="assets/hide.png" onclick="showPassword(this)">
                     </div>
                     <button>შენახვა</button>
@@ -56,28 +56,28 @@
         </section>
 
         <div class="form-container sign-up">
-            <form>
+            <form id="form">
                 <h1>რეგისტრაცია</h1>
                 <div class="person">
                     <div>
                         <span>სახელი</span>
-                        <input type="text">
+                        <input type="text" id="name-input">
                     </div>
                     <div>
                         <span>გვარი</span>
-                        <input type="text">
+                        <input type="text" id="surname-input">
                     </div>
                 </div>
                 <span>ელ.პოსტა</span>
-                <input type="email">
+                <input type="email" id="email">
                 <span>პაროლი</span>
                 <div class="password">
-                    <input type="password">
+                    <input type="password" id="password">
                     <img src="assets/hide.png" onclick="showPassword(this)">
                 </div>
                 <span>გაიმეორეთ პაროლი</span>
                 <div class="password">
-                    <input type="password">
+                    <input type="password" id="password">
                     <img src="assets/hide.png" onclick="showPassword(this)">
                 </div>
                 <div class="agreement">
@@ -106,5 +106,6 @@
     </div>
     
     <script src="index.js"></script>
+    <script src="validation.js"></script>
 </body>
 </html>
